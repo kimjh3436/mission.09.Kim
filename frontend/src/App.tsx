@@ -3,6 +3,7 @@ import "./App.css";
 import Header from "./components/Header";
 import TeamList from "./components/TeamList";
 
+// Define the structure of a Team object
 interface Team {
   school: string;
   name: string;
@@ -11,12 +12,14 @@ interface Team {
 }
 
 function App() {
+    // State to store the list of teams
   const [teams, setTeams] = useState<Team[]>([]);
 
+   // Fetch team data from the JSON file when the component mounts
   useEffect(() => {
-    fetch("/Teams.json") // Adjust this path if necessary
+    fetch("/Teams.json") 
       .then((response) => response.json())
-      .then((data) => setTeams(data.teams)) // Ensure `data.teams` matches JSON structure
+      .then((data) => setTeams(data.teams)) // Set the fetched teams in state
       .catch((error) => console.error("Error loading teams:", error));
   }, []);
 

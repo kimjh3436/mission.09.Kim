@@ -1,5 +1,6 @@
 import React from "react";
 
+// Header Component: Displays the website title and introduction
 const Header: React.FC = () => {
   return (
     <header style={{ textAlign: "center", padding: "20px", fontSize: "24px", fontWeight: "bold" }}>

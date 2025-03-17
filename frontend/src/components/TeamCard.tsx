@@ -1,11 +1,12 @@
 import React from "react";
 
+// Props interface for TeamCard
 interface TeamCardProps {
   school: string;
   mascot: string;
   location: string;
 }
-
+// TeamCard Component: Displays individual team details
 const TeamCard: React.FC<TeamCardProps> = ({ school, mascot, location }) => {
   return (
     <div style={{
